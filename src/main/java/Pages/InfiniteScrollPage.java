@@ -1,6 +1,9 @@
 package Pages;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 
-public class InfinieScrollPage {
+public class InfiniteScrollPage {
     private WebDriver driver;
     private By paragraphs = By.className("jscroll-added");
     public InfiniteScrollPage(WebDriver driver) {
@@ -18,4 +21,4 @@ public class InfinieScrollPage {
 
     }
 }
-}
+

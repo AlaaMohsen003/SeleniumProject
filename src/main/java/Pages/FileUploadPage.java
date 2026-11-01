@@ -1,8 +1,27 @@
 package Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class FileUpload {
+public class FileUploadPage {
     private WebDriver driver;
-    pu
+    private By fileUploadButton = By.id("file-upload");
+    private By fileSubmitButton = By.id("file-submit");
+    private By uploadedFiles=By.id("uploaded-files");
+
+    public FileUploadPage(WebDriver driver){
+        this.driver=driver;
+    }
+public void  uploadFile(String absoluteFilepath){
+        driver.findElement(fileUploadButton).sendKeys(absoluteFilepath);
+        clickSubmitButton();
+}
+public void clickSubmitButton(){
+        driver.findElement(fileSubmitButton).click();
+
+}
+public String getUploadedFileName(){
+      return   driver.findElement(uploadedFiles).getText();
+
+}
 }

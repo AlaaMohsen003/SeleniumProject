@@ -2,7 +2,6 @@ package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HomePage {
     private WebDriver driver;
@@ -25,9 +24,56 @@ return new LoginPage(driver);
         clickLink("Hovers");
         return new HoversPage(driver);
     }
+    public KeyPressesPage clickKeyPresses(){
+        clickLink("key presses");
+        return new KeyPressesPage(driver);
+    }
+    public JavaScriptAlertsPage clickJavaScriptAlrts(){
+        clickLink("JavaScript Alerts");
+        return new JavaScriptAlertsPage(driver);
+    }
+public FileUploadPage clickFileUpload(){
+        clickLink("File Upload");
+        return new FileUploadPage(driver);
+
+
+}
+public EntryAdPage clickEntryAd(){
+        clickLink("Entry Ad");
+        return new EntryAdPage(driver);
+}
+public FramesPage clickFrames(){
+        clickLink("Frames");
+        return new FramesPage(driver);
+}
+    public DynamicLoadingPage clickDynamicLoadingLink()
+    {
+        clickLink("Dynamic Loading");
+        return new DynamicLoadingPage(driver);
+    }
+    public LargeAndDeepDomPag clickLargeAndDeepLink()
+    {
+        clickLink("Large & Deep DOM");
+        return new LargeAndDeepDomPag(driver);
+    }
+    public InfiniteScrollPage clickInfiniteScroll()
+    {
+        clickLink("Infinite Scroll");
+        return new InfiniteScrollPage(driver);
+    }
+    public MultipleWindowsPage clickMultipleWindowsLink()
+    {
+        clickLink("Multiple Windows");
+        return new MultipleWindowsPage(driver);
+    }
+
+
+
+
 
 
     public void clickLink(String linkText){
+
         driver.findElement(By.linkText(linkText)).click();
     }
 
